@@ -11,18 +11,18 @@ $(document).ready(function(){
   for( var i= 1; i<101; i++){   
 
         if((i%5==0) && (i%3==0))
-          { $(".num").append(i + " Fizzbuzz" + "<br>");}
+          { $(".num").append( " Fizzbuzz" + "<br>");}
 
      //divisible by  3 
         else if (i%3==0)
-          { $(".num").append(i + " Fizz" + "<br>");}
+          { $(".num").append( " Fizz" + "<br>");}
 
    //divisible by  5
         else if(i%5==0) 
-         { $(".num").append(i + " buzz" + "<br>");}
+         { $(".num").append( " Buzz" + "<br>");}
 
    //all else
-        else { $(".num").append(i + "<br>");}  
+        else { $(".num").append( i + "<br>");}  
 		}
 }
 //get the number from user
