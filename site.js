@@ -3,13 +3,16 @@
 $(document).ready(function(){
 
 	// click to view the numbers
+
    $("button").on("click", getInput);
+
 
 });
 //find the Fizz, Buzz and FizzBuzz
   function getNumber(input){
-for( var i=1; i<input; i++) {
-
+    
+for( var i=0; i<=input; i++) {
+        
         if ((i%5==0) && (i%3==0))
           { $(".num").append( " Fizzbuzz" + "<br>");}
      //divisible by  3 
@@ -24,16 +27,19 @@ for( var i=1; i<input; i++) {
    //all else
         else { $(".num").append( i + "<br>");}  
 		}
+     $("button").slideToggle();
+     $("input").slideToggle();
 }
 //get the number from user
   function getInput() {
     var custInput = $(".datainput");
     var input = custInput.val();
-
+    
   if ((input !== "") && (input <= 100) && (input > 1) && ($.trim(input) !== "")) 
   {
    getNumber(input);
     custInput.val("");
+
   }
   else alert("Please enter a number between 1 and 100");
   }
