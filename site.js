@@ -11,7 +11,7 @@ $(document).ready(function(){
 //find the Fizz, Buzz and FizzBuzz
   function getNumber(input){
     
-for( var i=0; i<=input; i++) {
+for( var i=1; i<=input; i++) {
         
         if ((i%5==0) && (i%3==0))
           { $(".num").append( " Fizzbuzz" + "<br>");}
@@ -27,6 +27,7 @@ for( var i=0; i<=input; i++) {
    //all else
         else { $(".num").append( i + "<br>");}  
 		}
+    //hide input@button
      $("button").slideToggle();
      $("input").slideToggle();
 }
@@ -35,7 +36,7 @@ for( var i=0; i<=input; i++) {
     var custInput = $(".datainput");
     var input = custInput.val();
     
-  if ((input !== "") && (input <= 100) && (input > 1) && ($.trim(input) !== "")) 
+  if ((input !== "") && (input <= 100) && (input >= 1) && ($.trim(input) !== "")) 
   {
    getNumber(input);
     custInput.val("");
