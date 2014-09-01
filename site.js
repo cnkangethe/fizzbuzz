@@ -27,9 +27,7 @@ for( var i=1; i<=input; i++) {
    //all else
         else { $(".num").append( i + "<br>");}  
 		}
-    //hide input@button
-     $("button").slideToggle();
-     $("input").slideToggle();
+
 }
 //get the number from user
   function getInput() {
@@ -37,7 +35,10 @@ for( var i=1; i<=input; i++) {
     var input = custInput.val();
     
   if ((input !== "") && (input <= 100) && (input >= 1) && ($.trim(input) !== "")) 
+
   {
+      //hide input@button
+    $(".num").html('');
    getNumber(input);
     custInput.val("");
 
